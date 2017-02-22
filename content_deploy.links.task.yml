@@ -1,0 +1,9 @@
+content_deploy.deploy:
+  route_name: content_deploy.deploy
+  base_route: content_deploy.deploy
+  title: 'Deploy'
+
+content_deploy.settings:
+  route_name: content_deploy.settings
+  base_route: content_deploy.deploy
+  title: 'Settings'

@@ -1,0 +1,13 @@
+exports:
+  'taxonomy_term:idol': {}
+  'taxonomy_term:school': {}
+  'taxonomy_term:tags': {}
+  'block_content': {}
+  'node:article': {}
+default_settings:
+  overwrite_user_with: 'import_user'
+  overwrite_existing: true
+  delete_outdated: false
+directories:
+  sync: '../content/sync'
+  active: '../content/active'

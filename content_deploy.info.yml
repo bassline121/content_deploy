@@ -1,0 +1,6 @@
+name: Content Deploy
+type: module
+description: 'Exports and imports contents.'
+package: Core
+version: 8.x-0.0.0
+core: 8.x

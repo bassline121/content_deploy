@@ -1,0 +1,10 @@
+content_deploy.deploy:
+  title: 'Content deploy'
+  description: 'Import and export your content.'
+  route_name: content_deploy.deploy
+  parent: system.admin_config_development
+content_deploy.settings:
+  title: 'Settings'
+  description: 'Settings for content deploy.'
+  route_name: content_deploy.settings
+  parent: content_deploy.deploy

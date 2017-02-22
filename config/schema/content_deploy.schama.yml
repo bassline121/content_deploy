@@ -1,0 +1,4 @@
+content_deploy.settings:
+  type: mapping
+  label: Settings for content deploy
+  mapping: {}

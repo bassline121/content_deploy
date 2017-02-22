@@ -1,0 +1,14 @@
+content_deploy.deploy:
+  path: '/admin/config/development/deploy'
+  defaults:
+    _controller: '\Drupal\content_deploy\Controller\ContentDeployController::diff'
+    _title: 'Content deploy'
+  requirements:
+    _permission: 'synchronize content'
+content_deploy.settings:
+  path: '/admin/config/development/deploy/settings'
+  defaults:
+    _form: '\Drupal\content_deploy\Form\ConfigForm'
+    _title: 'Content deploy settings'
+  requirements:
+    _permission: 'administer site configuration'

@@ -1,0 +1,16 @@
+services:
+  logger.channel.content_deploy:
+    parent: logger.channel_base
+    arguments: ['content_deploy']
+  content_deploy.entity.repository:
+    class: Drupal\content_deploy\EntityRepository
+    arguments: ['@entity_type.manager']
+  content_deploy.restorer.factory:
+    class: Drupal\content_deploy\Dump\DumpRestorerFactory
+    arguments: ['@entity_type.manager', '@entity_field.manager', '@plugin.manager.field.field_type']
+  content_deploy.exporter.factory:
+    class: Drupal\content_deploy\ExporterFactory
+    arguments: ['@config.factory', '@entity_type.manager', '@logger.channel.content_deploy']
+  content_deploy.importer.factory:
+    class: Drupal\content_deploy\ImporterFactory
+    arguments: ['@config.factory', '@content_deploy.restorer.factory', '@content_deploy.entity.repository', '@logger.channel.content_deploy']
